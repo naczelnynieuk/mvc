@@ -12,7 +12,7 @@ use \Core\View;
 class Home extends \Core\Controller
 {
     public function indexAction() {
-        View::renderTemplate('Home/index.php', [
+        View::renderTemplate('Home/index.html', [
             'name' => 'Robert',
             'colours' => ['red', 'green', 'blue']
         ]);

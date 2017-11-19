@@ -7,13 +7,14 @@ namespace App\Controllers;
  * Date: 18.11.2017
  * Time: 18:58
  */
+
+use \Core\View;
+
 class Posts extends \Core\Controller
 {
     public function indexAction()
     {
-        echo 'Hello from the index action in the Posts controller';
-        echo '<p>Query string parameters: <pre>' .
-            htmlspecialchars(print_r($_GET, true)) . '</pre></p>';
+        View::renderTemplate('Posts/index.html');
     }
 
     public function addNewAction()
@@ -32,12 +33,10 @@ class Posts extends \Core\Controller
 
     protected  function before()
     {
-        echo '(BEFORE)';
     }
 
     protected function after()
     {
-        echo '(AFTER)';
     }
 
 }
