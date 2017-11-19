@@ -14,7 +14,10 @@ class Posts extends \Core\Controller
 {
     public function indexAction()
     {
-        View::renderTemplate('Posts/index.html');
+        $posts = \App\Models\Post::getAll();
+        View::renderTemplate('Posts/index.html', array(
+            'posts'=>$posts
+        ));
     }
 
     public function addNewAction()
