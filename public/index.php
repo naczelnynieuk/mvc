@@ -1,6 +1,6 @@
 <?php
 
-
+require '../vendor/autoload.php';
 
 spl_autoload_register(function ($class) {
     $root = dirname(__dir__); //get the parent directory

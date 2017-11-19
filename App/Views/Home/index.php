@@ -4,11 +4,11 @@
     </head>
     <body>
         <h1>Welcome</h1>
-        <p>Hello <?php echo htmlspecialchars($name); ?></p>
+        <p>Hello {{ name }}</p>
         <ul>
-            <?php foreach($colours as $colour): ?>
-            <li><?php echo htmlspecialchars($colour); ?></li>
-            <?php endforeach; ?>
+            {% for colour in colours %}
+            <li> {{ colour }}</li>
+            {% endfor %}
         </ul>
     </body>
 </html>
